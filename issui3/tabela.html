@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>IDADE</th>
+                    <th>EMAIL</th>
+                    <th>TELEFONE</th>
+                    <th>ENDEREÇO</th>
+                    <th>CEP</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody-users">
+
+            </tbody>
+        </table>
+    </main>
+
+
+    <script>
+
+        let tbodyUsers = document.querySelector("#tbody-users")
+
+        fetch("dados.json").then((response) => {
+            response.json().then((dados) => {
+                var table
+                dados.usuarios.map((usuario) => {
+                    tbodyUsers.innerHTML += `
+                <tr>  
+                    <td> ${usuario.nome}</td>
+                    <td>${usuario.idade}</td>
+                    <td> ${usuario.email}</td> 
+                    <td>${usuario.telefone}</td>
+                    <td>${usuario.endereco}</td>
+                    <td>${usuario.cep}</td>
+                </tr>`
+                })
+            })
+        })
+    </script>
+
+</body>
+
+</html>
