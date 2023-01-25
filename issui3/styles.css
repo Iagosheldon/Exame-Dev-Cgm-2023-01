@@ -1,0 +1,27 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    display: block;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+thead, tbody {
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dddddd;
+}

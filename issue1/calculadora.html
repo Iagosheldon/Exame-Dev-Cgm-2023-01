@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de Triângulo</h1>
+    </header>
+    <div id="form"><br>
+        PRIMEIRO LADO: 
+        <input onchange="calcular()" type="number" id="n1" placeholder="Digite o primeiro número">
+        <br><br>
+        SEGUNDO LADO:
+        <input onchange="calcular()" type="number" id="n2" placeholder="Digite o segundo número"><br><br>
+        TERCEIRO LADO:
+        <input onchange="calcular()" type="number" id="n3" placeholder="Digite o terceiro número"><br><br>
+       
+        
+        <br><br>
+        <!-- <button onclick="calcular()">calcular</button><br><br> -->
+
+        <div >
+            <h3 id="resultado">
+                Adicione um número
+            </h3>
+            <h3 id="triangulo"></h3>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>&copy; Feito por sheldon</p>
+    <script src="calculadora.js"></script>
+</footer>
+
+</html>
